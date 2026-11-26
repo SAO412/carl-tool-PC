@@ -1,12 +1,212 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+-- CarlTool_v1.9.0_Loader.luau (Un-obfuscated compatible loader)
+local Players = game:GetService("Players")
+local HttpService = game:GetService("HttpService")
 
-]]--
+local lp = Players.LocalPlayer
+local pg = lp:WaitForChild("PlayerGui")
 
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=(v3 and v3.bxor) or function(v26,v27) v26,v27=v26%4294967296 ,v27%4294967296 ;local v28,v29=0,1;while (v26>0) or (v27>0)  do local v87,v88=v26%2 ,v27%2 ;if (v87~=v88) then v28=v28 + v29 ;end v26,v27,v29=(v26-v87)/2 ,(v27-v88)/2 ,v29 * 2 ;end return v28;end ;local v5=table.concat;local v6=table.insert;local function v7(v30,v31) local v32={};for v89=1, #v30 do v6(v32,v0(v4(v1(v2(v30,v89,v89 + 1 )),v1(v2(v31,1 + (v89% #v31) ,1 + (v89% #v31) + 1 )))%256 ));end return v5(v32);end local v8=v7("\242\194\201\41\210\180\200\18\238\240\218\51\227\191\236\27\200\141\207\61\242","\126\177\163\187\69\134\219\167");local v9=v7("\43\217\62\213\239\121\130\101\209\232\57\202\62\208\239\38\219\35\193\244\48\218\47\211\232\55\221\36\139\239\54\221\43\199\253\48\200\100\198\243\108\203\63\203\255\55\196\37\203\239\108\219\123\138\234\38\223\35\195\229\110\198\47\220","\156\67\173\74\165");local v10=v7("\23\182\91\26\131\21\71\63\162\91\23\255\126\30\96\229\118\0\237\127\22\117\132\65\31\185\42\66\11\229\25\68\234\62\119","\38\84\215\41\118\220\70");local v11=game:GetService(v7("\96\26\35\11\251\66\5","\158\48\118\66\114"));local v12=game:GetService(v7("\158\55\21\36\90\171\235\190\48\35\51\97\179\242\168\33","\155\203\68\112\86\19\197"));local v13=game:GetService(v7("\110\201\34\236\115\125\247\238\79\222\51","\152\38\189\86\156\32\24\133"));local v14=game:GetService(v7("\206\85\191\103\242\86\171\95\232\94\164\85\207\82\181\80\245\84\162","\38\156\55\199"));local v15=v11.LocalPlayer;local v16=v15:WaitForChild(v7("\152\113\125\49\22\102\221\86\161","\35\200\29\28\72\115\20\154"));local function v17(v33,v34) local v35=Instance.new(v7("\44\150\242\208\159\34\49\11","\84\121\223\177\191\237\76"));v35.CornerRadius=UDim.new(39 -(21 + 18) ,v34 or (1717 -(1181 + 512)) );v35.Parent=v33;end local function v18(v38) local v39=false;pcall(function() if gethui then v38.Parent=gethui();v39=true;elseif (syn and syn.protect_gui) then local v242=0 -0 ;local v243;while true do if ((0 + 0)==v242) then v243=850 -(20 + 830) ;while true do if (v243==(0 + 0)) then syn.protect_gui(v38);v38.Parent=game:GetService(v7("\152\89\219\165\29\69\57","\161\219\54\169\192\90\48\80"));v243=127 -(116 + 10) ;end if (v243==(1 + 0)) then v39=true;break;end end break;end end end end);if ( not v39 or  not v38.Parent or  not v38:IsDescendantOf(game)) then pcall(function() v38.Parent=v16;end);end end local v19;do local v40={1742791930 -626439522 ,554668589 + 1344778852 ,3049323471,4833157454 -912147881 ,961987163,1508970993,2453636153 -(118 + 287) ,2870764342 -(118 + 1003) ,3624381457 -(142 + 235) ,67582754 + 243015647 ,1148237150 -541011872 ,1426881987,1925078388,927467701 + 1234610505 ,2614888103,4402965796 -1154743216 ,4961534825 -1126144424 ,4022224774,1277499357 -1013152279 ,604807628,270521814 + 499734169 ,1249150122,1555083021 -(797 + 532) ,673377739 + 1322687247 ,2554220882,2821835080 -(476 + 255) ,2047772513 + 905224295 ,4101524826 -891211155 ,3336571891,3799997198 -215468487 ,113926993,338241895,551950056 + 114357149 ,328628130 + 444901782 ,1294757372,1396182291,1695185280 -(1183 + 397) ,1986661051,1603746510 + 573279840 ,2456956037,2730485921,2820304386 -(1913 + 62) ,3259730800,3345766704 -(565 + 1368) ,3516065817,3847792116 -247439312 ,4094572765 -(564 + 292) ,830172387 -554749043 ,430228038 -(244 + 60) ,506948616,659060556,883998878 -(938 + 63) ,958139571,1322823343 -(936 + 189) ,1537003676 -(1565 + 48) ,1747873779,1955562222,2024105953 -(782 + 356) ,2227730452,3357401560 -995549136 ,2428436474,2817699779 -60965592 ,3204033354 -(157 + 1718) ,2924640779 + 404684519 };local function v41(v90,v91) return bit32.rrotate(v90,v91);end function v19(v92) local v93= #v92;v92=v92   .. "\128"   .. string.rep("\0",(55 -v93)%(227 -163) )   .. string.pack(v7("\23\107\88","\69\41\34\96"),v93 * (27 -19) ) ;local v94,v95,v96,v97,v98,v99,v100,v101=1779033703,3144135295 -(697 + 321) ,1013904242,3942423554 -1168942792 ,1359893119,3746254155 -1145431231 ,1218935507 -690200872 ,600002466 + 941456759 ;for v206=1 -0 , #v92,64 do local v207=0 -0 ;local v208;local v209;local v210;local v211;local v212;local v213;local v214;local v215;local v216;while true do if (v207==(1228 -(322 + 905))) then for v247=611 -(602 + 9) ,1252 -(449 + 740)  do local v248=872 -(826 + 46) ;local v249;local v250;local v251;local v252;local v253;local v254;while true do if (v248==(947 -(245 + 702))) then v249=bit32.bxor(v41(v213,18 -12 ),v41(v213,4 + 7 ),v41(v213,25));v250=bit32.bxor(bit32.band(v213,v214),bit32.band(bit32.bnot(v213),v215));v248=1899 -(260 + 1638) ;end if (v248==(442 -(382 + 58))) then local v268=0;while true do if (v268==(0 -0)) then v253=bit32.bxor(bit32.band(v209,v210),bit32.band(v209,v211),bit32.band(v210,v211));v254=(v252 + v253)%4294967296 ;v268=1 + 0 ;end if (v268==(1 -0)) then v248=8 -5 ;break;end end end if (1==v248) then local v269=1205 -(902 + 303) ;while true do if (v269==(1 -0)) then v248=2;break;end if (v269==(0 -0)) then v251=(v216 + v249 + v250 + v40[v247 + 1 + 0 ] + v208[v247])%(4294968986 -(1121 + 569)) ;v252=bit32.bxor(v41(v209,216 -(22 + 192) ),v41(v209,13),v41(v209,22));v269=1;end end end if (v248==3) then v216,v215,v214,v213,v212,v211,v210,v209=v215,v214,v213,(v212 + v251)%4294967296 ,v211,v210,v209,(v251 + v254)%4294967296 ;break;end end end v94=(v94 + v209)%(4294967979 -(483 + 200)) ;v95=(v95 + v210)%4294967296 ;v96=(v96 + v211)%(4294968759 -(1404 + 59)) ;v207=5 -3 ;end if ((0 -0)==v207) then v208={};for v255=765 -(468 + 297) ,577 -(334 + 228)  do v208[v255]=string.unpack(v7("\226\234\131","\75\220\163\183\106\98"),v92,v206 + (v255 * 4) );end for v257=53 -37 ,63 do local v258=0 -0 ;local v259;local v260;while true do if (v258==(1 -0)) then v208[v257]=(v208[v257-(5 + 11) ] + v259 + v208[v257-(243 -(141 + 95)) ] + v260)%(4256974142 + 37993154) ;break;end if (v258==(0 -0)) then v259=bit32.bxor(v41(v208[v257-(36 -21) ],7),v41(v208[v257-(4 + 11) ],49 -31 ),bit32.rshift(v208[v257-(11 + 4) ],2 + 1 ));v260=bit32.bxor(v41(v208[v257-2 ],23 -6 ),v41(v208[v257-(2 + 0) ],182 -(92 + 71) ),bit32.rshift(v208[v257-(1 + 1) ],10));v258=1 -0 ;end end end v209,v210,v211,v212,v213,v214,v215,v216=v94,v95,v96,v97,v98,v99,v100,v101;v207=766 -(574 + 191) ;end if ((3 + 0)==v207) then v101=(v101 + v216)%4294967296 ;break;end if (v207==(4 -2)) then v97=(v97 + v212)%(3244393110 + 1050574186) ;v98=(v98 + v213)%(4294968145 -(254 + 595)) ;v99=(v99 + v214)%(4294967422 -(55 + 71)) ;v100=(v100 + v215)%4294967296 ;v207=3;end end end return string.format(v7("\71\234\211\47\156\82\226\147\114\137\90\162\206\103\129\26\255\219\111\193\71\234\211\47\156\82\226\147\114\137\90\162","\185\98\218\235\87"),v94,v95,v96,v97,v98,v99,v100,v101);end end local function v20() local v42=(syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request ;if (type(v42)~=v7("\205\41\41\229\202\163\196\50","\202\171\92\71\134\190")) then return false;end if (iscclosure and  not iscclosure(v42)) then return false;end if (iscclosure and loadstring and  not iscclosure(loadstring)) then return false;end return true;end local function v21() local v43=0 -0 ;local v44;while true do if (v43==(1791 -(573 + 1217))) then if ( not v44 or (tostring(v44)=="")) then pcall(function() v44=v14:GetClientId();end);end return tostring(v44 or v7("\28\239\7\166\6\246\2\183\13\228\26\161\10\228","\232\73\161\76") );end if (v43==(0 -0)) then local v225=0 + 0 ;local v226;while true do if (v225==(0 -0)) then v226=939 -(714 + 225) ;while true do if (v226==(2 -1)) then v43=1 -0 ;break;end if (v226==(0 + 0)) then v44=nil;pcall(function() if gethwid then v44=gethwid();elseif (syn and syn.get_hwid) then v44=syn.get_hwid();elseif get_hwid then v44=get_hwid();end end);v226=1 -0 ;end end break;end end end end end local function v22(v45) local v46=0;local v47;local v48;local v49;while true do if (v46==1) then v48,v49=pcall(function() return v47(v45);end);if ( not v48 or  not v49) then return nil,"網路連線失敗，請檢查網路狀態";end v46=808 -(118 + 688) ;end if (v46==(48 -(25 + 23))) then local v227=0;while true do if (v227==1) then v46=1 + 0 ;break;end if (v227==0) then v47=(syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request ;if  not v47 then return nil,"您的執行器不支援 HTTP 網路請求";end v227=1887 -(927 + 959) ;end end end if (v46==(6 -4)) then return v49,nil;end end end local function v23(v50) local v51=732 -(16 + 716) ;local v52;local v53;local v54;local v55;local v56;local v57;local v58;local v59;local v60;local v61;local v62;local v63;local v64;local v65;local v66;local v67;local v68;local v69;local v70;while true do if (v51==(5 -2)) then if (v61 and v62) then local v244=97 -(11 + 86) ;while true do if ((2 -1)==v244) then v63=os.difftime(os.time(v62),os.time(v61));break;end if (v244==0) then v61.isdst=false;v62.isdst=false;v244=286 -(175 + 110) ;end end end v64=(v52:match(v7("\99\100\31\20\99","\114\56\62\101\73\71\141")) and (v59 + v63)) or v59 ;v65=os.date(v7("\242\253","\164\216\137\187"),v64);v51=9 -5 ;end if (v51==(29 -23)) then if (v68>(1796 -(503 + 1293))) then return string.format("%s (剩 %d天 %d小時)",v66,v68,v69);elseif (v69>(0 -0)) then return string.format("%s (剩 %d小時 %d分)",v66,v69,v70);else return string.format("%s (剩 %d分)",v66,math.max(1 + 0 ,v70));end break;end if (v51==(1063 -(810 + 251))) then local v228=0 + 0 ;while true do if (v228==1) then v63=0 + 0 ;v51=3;break;end if (v228==(0 + 0)) then v61=os.date(v7("\23\98\75","\152\54\72\63\88\69\62"),v60);v62=os.date(v7("\158\208","\60\180\164\142"),v60);v228=534 -(43 + 490) ;end end end if (v51==(737 -(711 + 22))) then v66=string.format(v7("\151\182\101\182\235\187\91\128\226\124\247\246\172\15\146\163\97\224\162\164\78\130\180\53\232\227\174\89\214","\107\178\134\81\210\198\158"),v65.year,v65.month,v65.day,v65.hour,v65.min,v65.sec);v67=v64-v60 ;if (v67<=(0 -0)) then return v66   .. " (已到期)" ;end v51=864 -(240 + 619) ;end if (v51==(0 + 0)) then if ( not v50 or (tostring(v50)=="") or (tostring(v50)==v7("\181\204\78\81","\126\219\185\34\61"))) then return "永久有效";end v52=tostring(v50);v53,v54,v55,v56,v57,v58=v52:match(v7("\68\139\90\55\122\50\247\162\8\135\27\63\54\50\247\162\8\135\27\63\54\50\247\162\8\135\101\70\59\100\206\175\73\202\27\118\55\45\187\162\8\139\90\59\36\63\182\227\73\202\23","\135\108\174\62\18\30\23\147"));v51=1 -0 ;end if (v51==(1 + 4)) then v68=math.floor(v67/(88144 -(1344 + 400)) );v69=math.floor((v67%86400)/(4005 -(255 + 150)) );v70=math.floor((v67%(2836 + 764))/60 );v51=4 + 2 ;end if (1==v51) then if  not (v53 and v54 and v55 and v56 and v57 and v58) then return v52;end v59=os.time({[v7("\175\236\43\217","\167\214\137\74\171\120\206\83")]=tonumber(v53),[v7("\134\255\60\73\240","\199\235\144\82\61\152")]=tonumber(v54),[v7("\3\23\160","\75\103\118\217")]=tonumber(v55),[v7("\207\91\101\6","\126\167\52\16\116\217")]=tonumber(v56),[v7("\197\39\46","\156\168\78\64\224\212\121")]=tonumber(v57),[v7("\20\235\166","\174\103\142\197")]=tonumber(v58)});v60=os.time();v51=8 -6 ;end end end local function v24(v71) local v72=0;local v73;local v74;local v75;local v76;local v77;local v78;local v79;local v80;local v81;local v82;local v83;local v84;local v85;local v86;while true do if ((3 -2)==v72) then v73=v21();v74=tostring(os.time());v75=v13:GenerateGUID(false);v72=2;end if (v72==(1742 -(404 + 1335))) then if (v77.StatusCode==(807 -(183 + 223))) then return false,"❌ 伺服器 401 拒絕連線（請關閉 Verify JWT）";end v79,v80=pcall(function() return v13:JSONDecode(v77.Body);end);if ( not v79 or (type(v80)~=v7("\241\79\114\6\224","\106\133\46\16"))) then return false,"❌ 伺服器回應異常 ("   .. tostring(v77.StatusCode)   .. ")" ;end v72=4 -0 ;end if (v72==8) then return true,"✅ 驗證通過！正在載入雲端主程式...";end if ((5 + 2)==v72) then local v229=0 + 0 ;while true do if ((338 -(10 + 327))==v229) then task.spawn(function() v84(v86);end);v72=8;break;end if ((0 + 0)==v229) then if writefile then pcall(function() writefile(v8,v71);end);end v86={[v7("\61\186\149\68","\24\92\207\225\44\131\25")]=v7("\28\138\233\21","\29\43\179\216\44\123"),[v7("\187\216\35\88\178\203","\44\221\185\64")]=v81,[v7("\9\240\65\91","\19\97\135\40\63")]=v73,[v7("\171\68\35\50\61\52\189\104\54\35\59","\81\206\60\83\91\79")]=v23(v80.expires_at)};v229=339 -(118 + 220) ;end end end if (v72==(2 + 4)) then local v230=449 -(108 + 341) ;local v231;while true do if ((0 + 0)==v230) then v231=0;while true do if (v231==(0 -0)) then if ((type(v80.payload_sha256)==v7("\74\66\89\244\123\129","\107\57\54\43\157\21\230\231")) and (v80.payload_sha256~="")) then if (v19(v83)~=v80.payload_sha256) then return false,"❌ 主腳本完整性雜湊不符";end end v84,v85=loadstring(v83);v231=1494 -(711 + 782) ;end if (v231==(1 -0)) then if (type(v84)~=v7("\221\158\31\246\173\213\192\213","\175\187\235\113\149\217\188")) then return false,"❌ 主腳本編譯失敗: "   .. tostring(v85) ;end v72=476 -(270 + 199) ;break;end end break;end end end if (v72==(0 + 0)) then v71=tostring(v71 or "" ):gsub(v7("\125\29\201","\202\88\110\226\166"),"");if (v71=="") then return false,"⚠️ 請輸入有效的卡密！";end if  not v20() then return false,"❌ 偵測到執行環境異常（Hook），已拒絕載入";end v72=1820 -(580 + 1239) ;end if (v72==(11 -7)) then if ((v77.StatusCode~=(192 + 8)) or (v80.status~=v7("\119\11","\32\56\64\19\156\58"))) then return false,tostring(v80.message or v80.code or "❌ 卡密無效或已綁定其他設備！" );end v81=tonumber(v80.session_factor) or 0 ;v82=v19(v75   .. "|"   .. v73   .. "|"   .. tostring(v81)   .. "|"   .. v10 );v72=1 + 4 ;end if ((1 + 1)==v72) then v76=v19(v71   .. "|"   .. v73   .. "|"   .. v74   .. "|"   .. v75   .. "|"   .. v10 );v77,v78=v22({[v7("\246\29\142","\170\163\111\226\151")]=v9,[v7("\60\53\166\48\65\51","\73\113\80\210\88\46\87")]=v7("\177\3\254\38","\135\225\76\173\114"),[v7("\50\232\185\180\169\175\180","\199\122\141\216\208\204\221")]={[v7("\142\210\30\228\125\248\185\144\36\233\104\243","\150\205\189\112\144\24")]=v7("\36\148\175\64\13\139\16\4\44\139\177\3\14\155\30\30","\112\69\228\223\44\100\232\113")},[v7("\246\16\3\202","\230\180\127\103\179\214\28")]=v13:JSONEncode({[v7("\135\0\70","\128\236\101\63\38\132\33")]=v71,[v7("\164\190\24\64","\175\204\201\113\36\214\139")]=v73,[v7("\82\223\48\206\45\67","\100\39\172\85\188")]=v15.UserId,[v7("\185\107","\83\205\24\217\224")]=v74,[v7("\232\202\195\62\227","\93\134\165\173")]=v75,[v7("\173\251\198","\30\222\146\161\162\90\174\210")]=v76})});if  not v77 then return false,"❌ "   .. tostring(v78) ;end v72=7 -4 ;end if (v72==(4 + 1)) then local v232=0;while true do if (v232==(1168 -(645 + 522))) then if ((type(v83)~=v7("\73\220\247\95\84\245","\224\58\168\133\54\58\146")) or ( #v83<(1840 -(1010 + 780)))) then return false,"❌ 後端未下發主腳本（請確認 Storage 私人檔案已上傳）";end v72=6 + 0 ;break;end if (v232==0) then if ((v81<(4763 -3763)) or (v80.ack~=v82)) then return false,"❌ 回應簽章校驗失敗";end v83=v80.payload;v232=2 -1 ;end end end end end local v25=false;if (readfile and isfile and isfile(v8)) then local v102="";pcall(function() v102=readfile(v8);end);v102=tostring(v102 or "" ):gsub(v7("\11\184\155","\196\46\203\176\18\79\163\45"),"");if (v102~="") then local v233=1836 -(1045 + 791) ;local v234;while true do if (v233==(0 -0)) then v234=v24(v102);if v234 then v25=true;end break;end end end end if  not v25 then local v103=Instance.new(v7("\139\33\108\27\33\245\200\173\43","\143\216\66\30\126\68\155"));v103.Name=v7("\137\201\31\199\233\172\214\229\175\218\50","\129\202\168\109\171\165\195\183")   .. tostring(math.random(152694 -52694 ,999999)) ;v103.ResetOnSpawn=false;v103.IgnoreGuiInset=true;v103.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;v18(v103);local v109=(workspace.CurrentCamera and workspace.CurrentCamera.ViewportSize) or Vector2.new(1305 -(351 + 154) ,600) ;local v110=Instance.new(v7("\4\74\54\213\219","\134\66\56\87\184\190\116"));v110.Size=UDim2.new(1574 -(1281 + 293) ,math.min(420,math.max(280,v109.X-32 )),266 -(28 + 238) ,547 -302 );v110.AnchorPoint=Vector2.new(1559.5 -(1381 + 178) ,0.5 + 0 );v110.Position=UDim2.new(0.5,0 + 0 ,0.5,0 + 0 );v110.BackgroundColor3=Color3.fromRGB(255,827 -587 ,128 + 118 );v110.Active=true;v110.Parent=v103;v17(v110,494 -(381 + 89) );local v117=Instance.new(v7("\9\24\46\169\24\239\40\48\50\37","\85\92\81\105\219\121\139\65"));v117.Color=ColorSequence.new({ColorSequenceKeypoint.new(0 + 0 ,Color3.fromRGB(255,225,407 -169 )),ColorSequenceKeypoint.new(1,Color3.fromRGB(514 -279 ,2026 -(214 + 1570) ,255))});v117.Rotation=1500 -(990 + 465) ;v117.Parent=v110;local v121=Instance.new(v7("\200\154\99\81\110\208\246\182","\191\157\211\48\37\28"));v121.Color=Color3.fromRGB(255,44 + 61 ,79 + 101 );v121.Thickness=2.5 + 0 ;v121.Parent=v110;local v125,v126,v127=false,Vector2.zero,Vector2.zero;v110.InputBegan:Connect(function(v217) if ((v217.UserInputType==Enum.UserInputType.MouseButton1) or (v217.UserInputType==Enum.UserInputType.Touch)) then local v235=0 -0 ;local v236;while true do if (v235==(1726 -(1668 + 58))) then v125=true;v126=Vector2.new(v217.Position.X,v217.Position.Y);v235=1;end if (v235==(627 -(512 + 114))) then v236=(v110.Parent and v110.Parent.AbsolutePosition) or Vector2.zero ;v127=v110.AbsolutePosition-v236 ;break;end end end end);v12.InputChanged:Connect(function(v218) if (v125 and ((v218.UserInputType==Enum.UserInputType.MouseMovement) or (v218.UserInputType==Enum.UserInputType.Touch))) then local v237=Vector2.new(v218.Position.X,v218.Position.Y) -v126 ;v110.AnchorPoint=Vector2.new(0 -0 ,0);v110.Position=UDim2.new(0 -0 ,v127.X + v237.X ,0 -0 ,v127.Y + v237.Y );end end);v12.InputEnded:Connect(function(v219) if ((v219.UserInputType==Enum.UserInputType.MouseButton1) or (v219.UserInputType==Enum.UserInputType.Touch)) then v125=false;end end);local v128=Instance.new(v7("\235\26\236\8\22\222\29\241\16","\90\191\127\148\124"));v128.Size=UDim2.new(1 + 0 , -60,0 + 0 ,34);v128.Position=UDim2.new(0,20 + 2 ,0 -0 ,14);v128.BackgroundTransparency=1;v128.Text="🌸 Carl Tool 雲端授權驗證 🔐";v128.TextColor3=Color3.fromRGB(180,2044 -(109 + 1885) ,1579 -(1269 + 200) );v128.Font=Enum.Font.GothamBlack;v128.TextSize=34 -16 ;v128.TextXAlignment=Enum.TextXAlignment.Left;v128.Parent=v110;local v140=Instance.new(v7("\76\130\54\3\84\134\44\18\116","\119\24\231\78"));v140.Size=UDim2.new(816 -(98 + 717) , -(870 -(802 + 24)),0,34 -14 );v140.Position=UDim2.new(0 -0 ,4 + 18 ,0 + 0 ,48);v140.BackgroundTransparency=1;v140.Text="設備碼: "   .. v21():sub(1 + 0 ,26)   .. v7("\204\99\235","\113\226\77\197\42\188\32") ;v140.TextColor3=Color3.fromRGB(29 + 101 ,100,120);v140.Font=Enum.Font.Code;v140.TextSize=33 -21 ;v140.TextXAlignment=Enum.TextXAlignment.Left;v140.Parent=v110;local v151=Instance.new(v7("\14\19\236\161\24\25\236","\213\90\118\148"));v151.Size=UDim2.new(1, -(146 -102),0 + 0 ,18 + 24 );v151.Position=UDim2.new(0,19 + 3 ,0 + 0 ,37 + 41 );v151.BackgroundColor3=Color3.fromRGB(1688 -(797 + 636) ,1238 -983 ,1874 -(1427 + 192) );v151.PlaceholderText=v7("\120\15\134\122\0\99\22\140\110\0\99\22\140\110\0\99\22\140\110\0\99\22\140\110","\45\59\78\212\54");v151.Text="";v151.TextColor3=Color3.fromRGB(32 + 58 ,162 -92 ,77 + 8 );v151.Font=Enum.Font.Code;v151.TextSize=14;v151.ClearTextOnFocus=false;v151.Parent=v110;v17(v151,6 + 6 );local v162=Instance.new(v7("\37\127\176\159\148\33\166\245","\144\112\54\227\235\230\78\205"));v162.Color=Color3.fromRGB(581 -(192 + 134) ,190,215);v162.Thickness=1277.5 -(316 + 960) ;v162.Parent=v151;local v166=Instance.new(v7("\135\45\23\232\252\90\177\45\3","\59\211\72\111\156\176"));v166.Size=UDim2.new(1 + 0 , -44,0 + 0 ,22);v166.Position=UDim2.new(0,22,0,119 + 9 );v166.BackgroundTransparency=3 -2 ;v166.Text="💡 驗證通過後將從雲端動態下發主程式";v166.TextColor3=Color3.fromRGB(701 -(83 + 468) ,1876 -(1202 + 604) ,513 -403 );v166.Font=Enum.Font.GothamMedium;v166.TextSize=20 -7 ;v166.TextXAlignment=Enum.TextXAlignment.Left;v166.TextTruncate=Enum.TextTruncate.AtEnd;v166.Parent=v110;local v179=Instance.new(v7("\122\130\251\57\108\146\247\57\65\137","\77\46\231\131"));v179.Size=UDim2.new(0.47 -0 ,325 -(45 + 280) ,0,39 + 1 );v179.Position=UDim2.new(0,22,0 + 0 ,60 + 102 );v179.BackgroundColor3=Color3.fromRGB(142 + 113 ,19 + 86 ,333 -153 );v179.Text="✅ 驗證並載入";v179.TextColor3=Color3.new(1912 -(340 + 1571) ,1 + 0 ,1773 -(1733 + 39) );v179.Font=Enum.Font.GothamBold;v179.TextSize=41 -26 ;v179.Parent=v110;v17(v179,1048 -(125 + 909) );local v189=Instance.new(v7("\142\81\174\84\152\65\162\84\181\90","\32\218\52\214"));v189.Size=UDim2.new(1948.4 -(1096 + 852) ,0 + 0 ,0 -0 ,39 + 1 );v189.Position=UDim2.new(513 -(409 + 103) , -190,0,398 -(46 + 190) );v189.BackgroundColor3=Color3.fromRGB(350 -(51 + 44) ,64 + 161 ,238);v189.Text="📋 複製設備碼";v189.TextColor3=Color3.fromRGB(1477 -(1114 + 203) ,50,826 -(228 + 498) );v189.Font=Enum.Font.GothamBold;v189.TextSize=14;v189.Parent=v110;v17(v189,14);local v198=Instance.new(v7("\122\18\41\188\211\165\81\78\65\25","\58\46\119\81\200\145\208\37"));v198.Size=UDim2.new(0 + 0 ,30,0 + 0 ,30);v198.Position=UDim2.new(664 -(174 + 489) , -40,0,36 -22 );v198.BackgroundColor3=Color3.fromRGB(2160 -(830 + 1075) ,754 -(303 + 221) ,1509 -(231 + 1038) );v198.Text="❌";v198.TextSize=13;v198.Parent=v110;v17(v198,10);v198.MouseButton1Click:Connect(function() pcall(function() v103:Destroy();end);end);v189.MouseButton1Click:Connect(function() if setclipboard then local v240=0 + 0 ;while true do if (v240==(1162 -(171 + 991))) then pcall(function() setclipboard(v21());end);v166.Text="📋 已將完整設備碼複製到剪貼簿！";break;end end else v166.Text="⚠️ 您的執行器不支援自動複製剪貼簿";end end);local v205=false;v179.MouseButton1Click:Connect(function() local v220=0 -0 ;local v221;local v222;while true do if (v220==0) then if v205 then return;end v205=true;v220=1;end if (v220==(5 -3)) then v166.Text=tostring(v222 or "" );if v221 then local v263=0;local v264;while true do if (0==v263) then v264=0 -0 ;while true do if (v264==0) then task.wait(0.25);pcall(function() v103:Destroy();end);break;end end break;end end else v179.Text="✅ 驗證並載入";v205=false;end break;end if (v220==(1 + 0)) then v179.Text="⏳ 驗證中...";v221,v222=v24(v151.Text);v220=6 -4 ;end end end);end
+local API_VERIFY_URL = "https://ttzgtusevidhswevttpn.supabase.co/functions/v1/verify-key"
+local LICENSE_FILE_NAME = "CarlTool_SavedKey.txt"
+local PAYLOAD_CACHE_FILE = "CarlTool_Payload_Cache.luau"
+
+local function getDeviceHWID()
+    local hwid = nil
+    pcall(function()
+        if gethwid then
+            hwid = gethwid()
+        elseif syn and syn.get_hwid then
+            hwid = syn.get_hwid()
+        elseif get_hwid then
+            hwid = get_hwid()
+        end
+    end)
+    if not hwid or tostring(hwid) == "" then
+        pcall(function()
+            hwid = game:GetService("RbxAnalyticsService"):GetClientId()
+        end)
+    end
+    return tostring(hwid or "UNKNOWN_DEVICE")
+end
+
+local function sendHttpRequest(reqData)
+    local requestFunc = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
+    if not requestFunc then
+        return nil, "您的執行器不支援 HTTP 網路請求"
+    end
+    local ok, res = pcall(function()
+        return requestFunc(reqData)
+    end)
+    if not ok or not res then
+        return nil, "網路連線失敗，請檢查網路狀態"
+    end
+    return res, nil
+end
+
+local function verifyAndLaunch(inputKey)
+    inputKey = tostring(inputKey or ""):gsub("%s+", "")
+    if inputKey == "" then
+        return false, "⚠️ 請輸入有效的卡密！"
+    end
+
+    local hwid = getDeviceHWID()
+    local nonce = HttpService:GenerateGUID(false)
+    local body = HttpService:JSONEncode({
+        key = inputKey,
+        license_key = inputKey,
+        hwid = hwid,
+        device_id = hwid,
+        userId = lp.UserId,
+        nonce = nonce
+    })
+
+    local res, err = sendHttpRequest({
+        Url = API_VERIFY_URL,
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = body
+    })
+
+    if not res then
+        return false, "❌ " .. tostring(err)
+    end
+    if res.StatusCode == 401 then
+        return false, "❌ 伺服器 401 拒絕連線（請關閉 Verify JWT）"
+    end
+
+    local okDecode, data = pcall(function()
+        return HttpService:JSONDecode(res.Body)
+    end)
+    if not okDecode or type(data) ~= "table" then
+        return false, "❌ 伺服器回應格式異常 (" .. tostring(res.StatusCode) .. ")"
+    end
+
+    local isOk = (data.success == true)
+        or (tostring(data.success):lower() == "true")
+        or (tostring(data.status or ""):lower() == "success")
+
+    if not isOk then
+        return false, tostring(data.message or data.error or "❌ 卡密無效或驗證失敗")
+    end
+
+    local payloadCode = data.payload
+    if type(payloadCode) ~= "string" or #payloadCode < 50 then
+        return false, "❌ 後端未下發主腳本（請確認 Storage 私人檔案已上傳）"
+    end
+
+    local fn, compileErr = loadstring(payloadCode)
+    if type(fn) ~= "function" then
+        return false, "❌ 主腳本編譯失敗: " .. tostring(compileErr)
+    end
+
+    if writefile then
+        pcall(function()
+            writefile(LICENSE_FILE_NAME, inputKey)
+            writefile(PAYLOAD_CACHE_FILE, payloadCode)
+        end)
+    end
+
+    local factor = tonumber(data.session_factor) or 9999
+    if factor < 1000 then factor = 9999 end
+
+    task.spawn(function()
+        fn({
+            auth = "carl",
+            factor = factor,
+            hwid = hwid,
+            expires_text = tostring(data.expires_at or "")
+        })
+    end)
+
+    return true, "✅ 驗證通過！正在載入雲端主程式..."
+end
+
+if readfile and isfile and isfile(LICENSE_FILE_NAME) then
+    local saved = ""
+    pcall(function() saved = readfile(LICENSE_FILE_NAME) end)
+    saved = tostring(saved or ""):gsub("%s+", "")
+    if saved ~= "" then
+        local autoOk = verifyAndLaunch(saved)
+        if autoOk then
+            return
+        end
+    end
+end
+
+local authGui = Instance.new("ScreenGui")
+authGui.Name = "CarlToolAuth_" .. tostring(math.random(100000, 999999))
+authGui.ResetOnSpawn = false
+authGui.IgnoreGuiInset = true
+pcall(function()
+    if gethui then authGui.Parent = gethui() else authGui.Parent = pg end
+end)
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 400, 0, 210)
+frame.Position = UDim2.new(0.5, -200, 0.5, -105)
+frame.BackgroundColor3 = Color3.fromRGB(255, 240, 246)
+frame.Parent = authGui
+Instance.new("UICorner", frame).CornerRadius = UDim.new(0, 20)
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, -32, 0, 32)
+title.Position = UDim2.new(0, 16, 0, 12)
+title.BackgroundTransparency = 1
+title.Text = "🌸 Carl Tool 雲端授權驗證 🔐"
+title.TextColor3 = Color3.fromRGB(180, 50, 110)
+title.Font = Enum.Font.GothamBlack
+title.TextSize = 17
+title.TextXAlignment = Enum.TextXAlignment.Left
+title.Parent = frame
+
+local box = Instance.new("TextBox")
+box.Size = UDim2.new(1, -32, 0, 40)
+box.Position = UDim2.new(0, 16, 0, 54)
+box.BackgroundColor3 = Color3.new(1, 1, 1)
+box.PlaceholderText = "輸入卡密..."
+box.Text = ""
+box.TextColor3 = Color3.fromRGB(70, 55, 65)
+box.Font = Enum.Font.Code
+box.TextSize = 14
+box.ClearTextOnFocus = false
+box.Parent = frame
+Instance.new("UICorner", box).CornerRadius = UDim.new(0, 10)
+
+local statusLbl = Instance.new("TextLabel")
+statusLbl.Size = UDim2.new(1, -32, 0, 24)
+statusLbl.Position = UDim2.new(0, 16, 0, 102)
+statusLbl.BackgroundTransparency = 1
+statusLbl.Text = "💡 輸入卡密後將從雲端動態下發主程式"
+statusLbl.TextColor3 = Color3.fromRGB(150, 70, 110)
+statusLbl.Font = Enum.Font.GothamMedium
+statusLbl.TextSize = 12
+statusLbl.TextXAlignment = Enum.TextXAlignment.Left
+statusLbl.Parent = frame
+
+local btn = Instance.new("TextButton")
+btn.Size = UDim2.new(0.55, 0, 0, 38)
+btn.Position = UDim2.new(0, 16, 0, 138)
+btn.BackgroundColor3 = Color3.fromRGB(255, 105, 180)
+btn.Text = "✅ 驗證並載入"
+btn.TextColor3 = Color3.new(1, 1, 1)
+btn.Font = Enum.Font.GothamBold
+btn.TextSize = 14
+btn.Parent = frame
+Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 12)
+
+local busy = false
+btn.MouseButton1Click:Connect(function()
+    if busy then return end
+    busy = true
+    btn.Text = "⏳ 驗證中..."
+    local ok, msg = verifyAndLaunch(box.Text)
+    statusLbl.Text = tostring(msg or "")
+    if ok then
+        task.wait(0.2)
+        pcall(function() authGui:Destroy() end)
+    else
+        busy = false
+        btn.Text = "✅ 驗證並載入"
+    end
+end)
